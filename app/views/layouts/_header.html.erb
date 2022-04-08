@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 <ul>
-   <li>
+  <li>
     <%= link_to "About" %>
   </li>
   <li>
@@ -16,23 +16,23 @@
 <% else %>
 <ul>
   <li>
-    <%= link_to root_path do%>
-      <i class="fas fa-home">Home</i>
+    <%= link_to root_path do %>
+      <i class="fas fa-home"></i>Home
     <% end %>
   </li>
   <li>
-    <%= link_to  do %>
-      <i class="fas fa-link">About</i>
+    <%= link_to  homes_about_path do %>
+      <i class="fas fa-link"></i>About
     <% end %>
   </li>
   <li>
     <%= link_to user_registration_path do %>
-      <i class="fas fa-user-plus">sign up</i>
+      <i class="fas fa-user-plus"></i>sign up
     <% end %>
   </li>
   <li>
     <%= link_to user_session_path do %>
-      <i class="fas fa-sign-in-alt">login</i>
+      <i class="fas fa-sign-in-alt"></i>login
     <% end %>
   </li>
 </ul>
