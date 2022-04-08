@@ -1,0 +1,39 @@
+<% if user_signed_in? %>
+<ul>
+   <li>
+    <%= link_to "About" %>
+  </li>
+  <li>
+    <%= link_to "About" %>
+  </li>
+  <li>
+    <%= link_to "About" %>
+  </li>
+  <li>
+    <%= link_to "About" %>
+  </li>
+</ul>
+<% else %>
+<ul>
+  <li>
+    <%= link_to root_path do%>
+      <i class="fas fa-home">Home</i>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to  do %>
+      <i class="fas fa-link">About</i>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to user_registration_path do %>
+      <i class="fas fa-user-plus">sign up</i>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to user_session_path do %>
+      <i class="fas fa-sign-in-alt">login</i>
+    <% end %>
+  </li>
+</ul>
+<% end %>
