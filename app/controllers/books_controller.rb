@@ -48,6 +48,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.reqier(:book).permit(:title, :body)
+    params.requier(:book).permit(:title, :body)
   end
 end
