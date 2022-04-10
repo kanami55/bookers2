@@ -1,21 +1,6 @@
 <% if user_signed_in? %>
 <ul>
   <li>
-    <%= link_to "About" %>
-  </li>
-  <li>
-    <%= link_to "About" %>
-  </li>
-  <li>
-    <%= link_to "About" %>
-  </li>
-  <li>
-    <%= link_to "About" %>
-  </li>
-</ul>
-<% else %>
-<ul>
-  <li>
     <%= link_to root_path do %>
       <i class="fas fa-home"></i>Home
     <% end %>
@@ -33,6 +18,29 @@
   <li>
     <%= link_to user_session_path do %>
       <i class="fas fa-sign-in-alt"></i>login
+    <% end %>
+  </li>
+</ul>
+<% else %>
+<ul>
+  <li>
+    <%= link_to root_path do %>
+      <i class="fas fa-home"></i>Home
+    <% end %>
+  </li>
+  <li>
+    <%= link_to users_path do %>
+      <i class="fas fa-users"></i>Users
+    <% end %>
+  </li>
+  <li>
+    <%= link_to  do %>
+      <i class="fas fa-book"></i>Books
+    <% end %>
+  </li>
+  <li>
+    <%= link_to destroy_user_session_path, methd: :delete do %>
+      <i class="fas fa-sign-out-alt"></i>logout
     <% end %>
   </li>
 </ul>
