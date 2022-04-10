@@ -1,0 +1,18 @@
+<!--パーシャル-->
+
+<h2>Book detail</h2>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <%= @book.user.name %>
+      </td>
+      <td><%= @book.title %></td>
+      <td><%= @book.body %></td>
+      <% if @book.user == current_user %>
+      <td><%= link_to "Edit", edit_book_psth(@book.id), class: "btn btn-sm btn-success" %></td>
+      <td><%= link_to "Destroy", methd: :delete, class: "btn btn-sm btn-danger" %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
