@@ -1,13 +1,11 @@
 <div class="container">
   <div class="row">
     <!--パーシャル-->
-    <div class="left">
-      <%= render "users/side", user: @user %>
-    </div>
+      <%= render "users/side", user: @user, new_book: @new_book %>
 
-    <div class="right">
+    <div class="right col-md-8 offset-md-1">
       <h2>Books</h2>
-        <table>
+        <table class="table">
           <thead>
             <tr>
               <th>Title</th>

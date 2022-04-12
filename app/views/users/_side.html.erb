@@ -1,4 +1,4 @@
-<div class="container">
+<div class="left col-md-3">
   <h2>User info</h2>
   <table class="table">
     <tboby>
@@ -24,7 +24,7 @@
   </div>
 
   <h2>New book</h2>
-    <%= form_with model: @users, local: true do |f| %>
+    <%= form_with model: new_book, local: true do |f| %>
   <div class="form-group">
     <label>Title</label><br>
     <%= f.text_field :title, class: "form-control" %>
