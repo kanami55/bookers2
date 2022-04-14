@@ -1,19 +1,25 @@
-<!--パーシャル-->
-
-<h2>Books</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Opinion</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @books.each do |book| %>
-    <tr>
-      <td><%= book.title %></td>
-      <td><%= book.body %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container mt-4">
+  <div class="row">
+    <!--パーシャル-->
+      <%= render "users/side", user: @user, new_book: @new_book %>
+      <div class="right col-md-8 offset-md-1">
+        <h2>Books</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Opinion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @books.each do |book| %>
+            <tr>
+              <td><%= book.title %></td>
+              <td><%= book.body %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
