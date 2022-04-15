@@ -36,6 +36,7 @@ class UsersController < ApplicationController
     @user.update(user_paramas)
     if @user.save
       redirect_to user_path(@user.id)
+      flash[:notice] = "更新に成功しました。"
     else
       render "edit"
     end
