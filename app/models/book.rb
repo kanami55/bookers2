@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
   belongs_to :user
 
-  validates :title, plesence: :true
-  validates :body, plesence: :true
+  validates :title, presence: :true
+  validates :body, presence: :true
 end
