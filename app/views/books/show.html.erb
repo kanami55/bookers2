@@ -21,6 +21,8 @@
           </tr>
         </tbody>
       </table>
+      <%= render "comments/comment", book: @book, comment: @comment %>
+      <%= render "comments/comment_form", book: @book, comment: @comment %>
     </div>
   </div>
 </div>
