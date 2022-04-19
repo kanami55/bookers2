@@ -7,6 +7,7 @@ class User < ApplicationRecord
   #アソシエーション
   has_many :books, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :comment, dependent: :destroy
   has_one_attached :profile_image
 
   validates :name, length: { in: 2..20 }, uniqueness: true
