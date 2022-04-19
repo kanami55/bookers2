@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/homes/about' => 'homes#about'
   resources :users, only: [:new, :create, :index, :show, :edit, :update]
   resources :books, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
+    resources :comments, only: [:create, :destroy]
     resource :likes, only: [:create, :destroy]
   end
+
 end
